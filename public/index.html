@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Speech Input API experiment (Brain Age Color Game Clone)</title>
+<title>Speech Input API experiment (Stroop Test like Brain Age Color Game)</title>
 <style type="text/css">
   .black { color: black;}
   .blue { color: blue;}
   .red { color: red; }
   .yellow { color: yellow;}
+  h2 {
+    margin-top: 300px;
+  }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -39,14 +42,25 @@
 </head>
 <body>
   <p>This only works in Chrome 11</p>
-  <input type="text" x-webkit-speech onwebkitspeechchange='run()' />
+  <input type="text" x-webkit-speech onwebkitspeechchange='run()' x-webkit-grammar="grammar.grxml" autofocus />
     
     <h1></h1>
+    
+    <h2>How Does this Work</h2>
+    <p>Google Chrome recently added it's experimental Speech Input API to Chrome's Beta channel. This allows the browser to transcribe voice input by sending voice recordings to </p>
 
-    <!-- References 
-    https://docs.google.com/View?id=dcfg79pz_5dhnp23f5
-    http://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/speech/
-    http://www.w3.org/2005/Incubator/htmlspeech/2010/10/google-api-draft.html#speech_input_result_interface
-    -->
+    <h2>Resources</h2>
+    <ul>
+      <li><a href='https://docs.google.com/View?id=dcfg79pz_5dhnp23f5'>https://docs.google.com/View?id=dcfg79pz_5dhnp23f5</a></li>
+      <li><a href='http://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/speech/'>http://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/speech/</a></li>
+      <li><a href='http://www.w3.org/2005/Incubator/htmlspeech/2010/10/google-api-draft.html'>http://www.w3.org/2005/Incubator/htmlspeech/2010/10/google-api-draft.html</a></li>
+      <li><a href='http://news.ycombinator.com/item?id=1972855'>http://news.ycombinator.com/item?id=1972855</a></li>
+    </ul>
+    
+    <h2>Other information</h2>
+    Inspired by Brain Age's <a href='http://en.wikipedia.org/wiki/Stroop_effect'>Stroop Test</a> 
+    By Eric Cranston contact@ericcranston.com <a href='http://www.ericcranston.com'>ericcranston.com</a>
+    <a href='https://github.com/cracell/Speech-Input-API-Stroop-Test-Demo'>Fork Me on Github</a>
+    <ul>
   </body>
 </html>
